@@ -1,0 +1,124 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 100% 98%;
+    --foreground: 260 24% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 24% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 24% 14%;
+
+    --primary: 260 84% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 92% 91%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 260 70% 96%;
+    --muted-foreground: 260 20% 45%;
+
+    --accent: 23 91% 91%;
+    --accent-foreground: 260 24% 14%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 20% 88%;
+    --input: 260 20% 88%;
+    --ring: 260 84% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 260 100% 98%;
+    --sidebar-foreground: 260 24% 14%;
+    --sidebar-primary: 260 84% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 70% 96%;
+    --sidebar-accent-foreground: 260 24% 14%;
+    --sidebar-border: 260 20% 88%;
+    --sidebar-ring: 260 84% 75%;
+  }
+
+  .dark {
+    --background: 260 24% 14%;
+    --foreground: 260 70% 96%;
+
+    --card: 260 24% 14%;
+    --card-foreground: 260 70% 96%;
+
+    --popover: 260 24% 14%;
+    --popover-foreground: 260 70% 96%;
+
+    --primary: 260 84% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 50% 30%;
+    --secondary-foreground: 260 70% 96%;
+
+    --muted: 260 25% 25%;
+    --muted-foreground: 260 25% 75%;
+
+    --accent: 23 50% 40%;
+    --accent-foreground: 260 70% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 260 70% 96%;
+
+    --border: 260 25% 25%;
+    --input: 260 25% 25%;
+    --ring: 260 84% 75%;
+    
+    --sidebar-background: 260 24% 14%;
+    --sidebar-foreground: 260 70% 96%;
+    --sidebar-primary: 260 84% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 25% 25%;
+    --sidebar-accent-foreground: 260 70% 96%;
+    --sidebar-border: 260 25% 25%;
+    --sidebar-ring: 260 84% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.therapeutic-gradient {
+  background: linear-gradient(135deg, #E5DEFF 0%, #D3E4FD 100%);
+}
+
+.therapeutic-card {
+  @apply bg-white bg-opacity-90 backdrop-blur-sm rounded-lg shadow-md 
+         border border-therapeutic-blue/30 hover:shadow-lg transition-all duration-300;
+}
+
+.therapeutic-input {
+  @apply bg-white bg-opacity-70 backdrop-blur-sm rounded-md border border-therapeutic-blue/50
+         focus:border-therapeutic-lavender focus:ring-1 focus:ring-therapeutic-lavender/50
+         placeholder:text-therapeutic-charcoal/40 transition-all duration-200;
+}
+
+.animate-breath {
+  animation: breathing 8s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
