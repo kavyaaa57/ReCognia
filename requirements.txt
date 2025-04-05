@@ -1,0 +1,12 @@
+react
+react-dom
+vite
+typescript
+tailwindcss
+postcss
+autoprefixer
+eslint
+clsx
+lucide-react
+tailwind-variants
+@radix-ui/react-icons
